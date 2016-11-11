@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>莫斯</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+    	body{
+    		background-color:#ddd;
+    	}
+    	.container{
+    		padding: 20px;
+    	}
+		.card-text{
+			word-break: break-word;
+			font-size: 20px;
+		}
+    </style>
+</head>
+
+<body>
+    <div class="container" id="app">
+        <div class="form-group">
+            <input v-model="code" class="form-control" id="exampleInputPassword1" placeholder="输入短语">
+        </div>
+        <div class="card">
+            <div class="card-block">
+                <h4 class="card-title">结果</h4>
+                <p class="card-text" v-html="parseCode"></p>
+            </div>
+        </div>
+        <div class="form-group">
+            <input v-model="word" class="form-control" id="exampleInputPassword1" placeholder="输入摩斯密码">
+        </div>
+        <div class="card">
+            <div class="card-block">
+                <h4 class="card-title">结果</h4>
+                <p class="card-text" v-html="parseWord"></p>
+            </div>
+        </div>
+    </div>
+    <script src="/vue.js"></script>
+    <script src="/index.js"></script>
+</body>
+
+</html>
